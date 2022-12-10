@@ -40,3 +40,21 @@ function average(){
 	var avg = getResult(scoreEng,scoreMath,scoreChem,scoreBio,scoreFre) / 5;
 	return avg
 }
+
+function remarks(){
+	var avg = average()
+	var message = '' //this local variable just for remarks
+	
+	if(avg >=80 && avg <=100){
+		message = 'Excellent!';
+	}else if(avg >=70 && avg <80){
+		message = 'Well done!';
+	}else if(avg >=60 && avg <70){
+		message = 'Good job!';
+	}else if(avg >=50 && avg <60){
+		message = 'Passed, But you can do better!';
+	}else{
+		message = 'Failed! Try Harder Next Time'
+	}
+	return message
+}
