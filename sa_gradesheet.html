@@ -23,7 +23,16 @@
 					<p>Biology</p>
 					<p>French</p>
 				</article>
-				<button type="button" class="btn btn-outline-secondary">Get Result</button>
+				<button type="button" class="btn btn-outline-secondary" onclick="
+					var scoreEng = document.getElementById('subEng').value
+					var scoreMath = document.getElementById('subMath').value
+					var scoreChem = document.getElementById('subChem').value
+					var scoreBio = document.getElementById('subBio').value
+					var scoreFre = document.getElementById('subFre').value
+					
+					document.getElementById('totalscore').value = getResult(scoreEng,scoreMath,scoreChem,scoreBio,scoreFre)
+					document.getElementById('averageScore').value = average()
+				">Get Result</button>
 			</div>
 			
 			<div class="col-md" >
@@ -71,7 +80,7 @@
 			</div>
 			<div class="col-md-4" >
 				<article>
-					<input type="text" name="total" id="total" class="form-control" disabled>
+					<input type="text" name="total" id="totalscore" class="form-control" disabled>
 				</article>
 			</div>
 		</div>
@@ -82,7 +91,7 @@
 			</div>
 			<div class="col-md-4" >
 				<article>
-					<input type="text" name="average" id="average" class="form-control" disabled>
+					<input type="text" name="average" id="averageScore" class="form-control" disabled>
 				</article>
 			</div>
 			

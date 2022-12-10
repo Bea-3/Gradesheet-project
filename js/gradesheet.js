@@ -24,3 +24,19 @@ function gradeChecker(score){
 	}
 	return message;
 }
+
+//onclick function for the button Get result
+function getResult(scoreEng,scoreMath,scoreChem,scoreBio,scoreFre){
+	var _total = Number(scoreEng) + Number(scoreMath) + Number(scoreChem) + Number(scoreBio) + Number(scoreFre)
+	return _total
+}
+function average(){
+	var scoreEng = document.getElementById('subEng').value
+	var scoreMath = document.getElementById('subMath').value
+	var scoreChem = document.getElementById('subChem').value
+	var scoreBio = document.getElementById('subBio').value
+	var scoreFre = document.getElementById('subFre').value
+	
+	var avg = getResult(scoreEng,scoreMath,scoreChem,scoreBio,scoreFre) / 5;
+	return avg
+}
