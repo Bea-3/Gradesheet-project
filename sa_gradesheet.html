@@ -10,20 +10,93 @@
 			border:0px solid red;
 			min-height:50px;
 		}
+		.bold p{
+			font-size:1.3vw
+		}
+		.navbar{
+			background-color:#0a2351
+		}
+		.navbar ul li a{
+			text-decoration:none;
+			color:white;
+			background-color:#ba983b
+		}
+		.navbar li a:hover{
+			padding:10px;
+			color:#0a2351;
+		}
+		#check{
+			text-align:center;
+			color:#0a2351;
+			padding:8px;
+			border:1px solid #ba983b;
+		}
+		h4{
+			background-color:#57737A;
+			color:white;
+			padding:5px;
+		}
+		ol li{
+			margin:2px;
+		}
+		.print, #welcome{
+			color:#3B3F40;
+		}
+		@media all and (max-width:576px){
+			#row2{
+				
+			}
+		}
 	</style>
 <body>
-	<div class="container" >
-		<div class="row mt-3">
-			<div class="col-md" >
+	<div class="container">
+		<div class="row" id="row1">
+			<nav class="navbar navbar-expand-lg col-md-12" >
+				<div class="container-fluid">
+				<a href="#">
+					<img src="images/salogomini.png" width="20%" alt="logo"> 
+				</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navitem"
+					aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon bg-light"></span>
+					</button>
+				<div class="collapse navbar-collapse justify-content-end" id="navitem">
+					<ul class="navbar-nav mb-2 mb-lg-0">
+						<li class="nav-item mx-3">
+						<a class="nav-link active" aria-current="Home" href="#welcome">Home</a>
+						</li>
+						<li class="nav-item">
+						<a class="nav-link" href="#check">Check Grade</a>
+						</li>
+					</ul>
+				</div>
+				</div>
+			</nav>
+		
+			<div class="col-md-12 mt-3">
+				<h2 id="welcome">Welcome to your Student Portal</h2>
+				<h6 class="print">Please follow the instructions below to view your result.</h6>
+					<ol type="i" style="list-style-position:inside" class="print">
+						<li>Have your score ready for the respective subjects.</li>
+						<li>Under the score heading, input each score per subject.</li>
+						<li>Please note, you ONLY input the score and the respective grade will display.</li>
+						<li>Click Get Result.</li>
+					</ol>
+				<h3 id="check"> Check Grade<h3>
+			</div>
+		</div>
+		
+		<div class="row" id="row2">
+			<div class="col-md mt-4" >
 				<h4>Subject</h4>
-				<article>
+				<article class="bold print">
 					<p>English</p>
 					<p>Maths</p>
 					<p>Chemistry</p>
 					<p>Biology</p>
 					<p>French</p>
 				</article>
-				<button type="button" class="btn btn-outline-secondary" onclick="
+				<button type="button" class="btn btn-outline-warning" onclick="
 					var scoreEng = document.getElementById('subEng').value
 					var scoreMath = document.getElementById('subMath').value
 					var scoreChem = document.getElementById('subChem').value
@@ -36,40 +109,40 @@
 				">Get Result</button>
 			</div>
 			
-			<div class="col-md" >
+			<div class="col-md mt-4" >
 				<h4>Score</h4>
 				<section>
 					<input type="text" name="english" id="subEng" class="form-control" oninput="
 						var studentInput = this.value
 						document.getElementById('gradeEng').value = gradeChecker(studentInput)
 					">
-					<input type="text" name="maths" id="subMath" class="form-control" oninput="
+					<input type="text" name="maths" id="subMath" class="form-control mt-1" oninput="
 						var studentInput = this.value
 						document.getElementById('gradeMath').value = gradeChecker(studentInput)
 					">
-					<input type="text" name="chemistry" id="subChem" class="form-control" oninput="
+					<input type="text" name="chemistry" id="subChem" class="form-control mt-1" oninput="
 						var studentInput = this.value
 						document.getElementById('gradeChem').value = gradeChecker(studentInput)
 					">
-					<input type="text" name="biology" id="subBio" class="form-control" oninput="
+					<input type="text" name="biology" id="subBio" class="form-control mt-1" oninput="
 						var studentInput = this.value
 						document.getElementById('gradeBio').value = gradeChecker(studentInput)
 					">
-					<input type="text" name="french" id="subFre" class="form-control" oninput="
+					<input type="text" name="french" id="subFre" class="form-control mt-1" oninput="
 						var studentInput = this.value
 						document.getElementById('gradeFre').value = gradeChecker(studentInput)
 					">
 				</section>
 			</div>
 			
-			<div class="col-md" >
+			<div class="col-md mt-4" >
 				<h4>Grade</h4>
 				<section>
 					<input type="text" name="english" id="gradeEng" class="form-control" disabled>
-					<input type="text" name="maths" id="gradeMath" class="form-control" disabled>
-					<input type="text" name="chemistry" id="gradeChem" class="form-control" disabled>
-					<input type="text" name="biology" id="gradeBio" class="form-control" disabled>
-					<input type="text" name="french" id="gradeFre" class="form-control" disabled>
+					<input type="text" name="maths" id="gradeMath" class="form-control mt-1" disabled>
+					<input type="text" name="chemistry" id="gradeChem" class="form-control mt-1" disabled>
+					<input type="text" name="biology" id="gradeBio" class="form-control mt-1" disabled>
+					<input type="text" name="french" id="gradeFre" class="form-control mt-1" disabled>
 				</section>
 			</div>
 			
@@ -77,7 +150,7 @@
 		
 		<div class="row mt-3">
 			<div class="col-md-4" >
-				<article><h3>Total</h3></article>
+				<article><h3 class="print">Total</h3></article>
 			</div>
 			<div class="col-md-4" >
 				<article>
@@ -88,7 +161,7 @@
 		
 		<div class="row mt-2">
 			<div class="col-md-4 " >
-				<article><h3>Average</h3></article>
+				<article><h3 class="print">Average</h3></article>
 			</div>
 			<div class="col-md-4" >
 				<article>
@@ -100,7 +173,7 @@
 		
 		<div class="row d-flex">
 			<div class="col-md-4 mt-5" style="align-self:flex-end">
-				<article><h3>Remark</h3></article>
+				<article><h3 class="print">Remark</h3></article>
 			</div>
 			<div class="col-md-4 mt-5" style="align-self:flex-end">
 				<article>
