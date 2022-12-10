@@ -29,11 +29,26 @@
 			<div class="col-md" >
 				<h4>Score</h4>
 				<section>
-					<input type="text" name="english" id="subEng" class="form-control">
-					<input type="text" name="maths" id="subMath" class="form-control">
-					<input type="text" name="chemistry" id="subChem" class="form-control">
-					<input type="text" name="biology" id="subBio" class="form-control">
-					<input type="text" name="french" id="subFre" class="form-control">
+					<input type="text" name="english" id="subEng" class="form-control" oninput="
+						var studentInput = this.value
+						document.getElementById('gradeEng').value = gradeChecker(studentInput)
+					">
+					<input type="text" name="maths" id="subMath" class="form-control" oninput="
+						var studentInput = this.value
+						document.getElementById('gradeMath').value = gradeChecker(studentInput)
+					">
+					<input type="text" name="chemistry" id="subChem" class="form-control" oninput="
+						var studentInput = this.value
+						document.getElementById('gradeChem').value = gradeChecker(studentInput)
+					">
+					<input type="text" name="biology" id="subBio" class="form-control" oninput="
+						var studentInput = this.value
+						document.getElementById('gradeBio').value = gradeChecker(studentInput)
+					">
+					<input type="text" name="french" id="subFre" class="form-control" oninput="
+						var studentInput = this.value
+						document.getElementById('gradeFre').value = gradeChecker(studentInput)
+					">
 				</section>
 			</div>
 			
