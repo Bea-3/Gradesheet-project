@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+	<title>Miniproject - Gradesheet </title>
+	<!-- Bootsrtap CSS-->
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+</head>
+	<style type="text/css">
+		div{
+			border:0px solid red;
+			min-height:100px;
+		}
+	</style>
+<body>
+	<div class="container">
+		<div class="row mt-3">
+			<div class="col-md" >
+				<h4>Subject</h4>
+				<article>
+					<p>English</p>
+					<p>Maths</p>
+					<p>Chemistry</p>
+					<p>Biology</p>
+					<p>French</p>
+				</article>
+				<button type="button" class="btn btn-outline-secondary">Get Result</button>
+			</div>
+			
+			<div class="col-md" >
+				<h4>Score</h4>
+				<section>
+					<input type="text" name="english" id="subEng" class="form-control">
+					<input type="text" name="maths" id="subMath" class="form-control">
+					<input type="text" name="chemistry" id="subChem" class="form-control">
+					<input type="text" name="biology" id="subBio" class="form-control">
+					<input type="text" name="french" id="subFre" class="form-control">
+				</section>
+			</div>
+			
+			<div class="col-md" >
+				<h4>Grade</h4>
+				<section>
+					<input type="text" name="english" id="gradeEng" class="form-control" disabled>
+					<input type="text" name="maths" id="gradeMath" class="form-control" disabled>
+					<input type="text" name="chemistry" id="gradeChem" class="form-control" disabled>
+					<input type="text" name="biology" id="gradeBio" class="form-control" disabled>
+					<input type="text" name="french" id="gradeFre" class="form-control" disabled>
+				</section>
+			</div>
+			
+		</div>
+		
+		<div class="row mt-5">
+			<div class="col-md-4" >
+				<article><h3>Total</h3></article>
+			</div>
+			<div class="col-md-4" >
+				<article>
+					<input type="text" name="total" id="total" class="form-control" disabled>
+				</article>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-4" >
+				<article><h3>Average</h3></article>
+			</div>
+			<div class="col-md-4" >
+				<article>
+					<input type="text" name="average" id="average" class="form-control" disabled>
+				</article>
+			</div>
+			
+		</div>
+		
+		<div class="row">
+			<div class="col-md" >
+				<article><h3>Remark</h3></article>
+			</div>
+			<div class="col-md" >
+				<article>
+					<input type="text" name="remark" id="remark" class="form-control" readonly>
+				</article>
+			</div>
+			<div class="col-md"  >
+				img
+			</div>
+			
+		</div>
+	</div>
+	
+<!-- External JS -->
+<script src="js/gradesheet.js"></script>
+</body>
+</html>
