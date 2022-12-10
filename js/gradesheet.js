@@ -47,14 +47,21 @@ function remarks(){
 	
 	if(avg >=80 && avg <=100){
 		message = 'Excellent!';
+		document.getElementById('imgremark').innerHTML ='<object data="images/amazing.jpg" height="230px"></object>'
 	}else if(avg >=70 && avg <80){
 		message = 'Well done!';
+		document.getElementById('imgremark').innerHTML = '<object data="images/applause.gif" height="230px"></object>'
 	}else if(avg >=60 && avg <70){
 		message = 'Good job!';
+		document.getElementById('imgremark').innerHTML ='<object data="images/thumbs.gif" height="230px"></object>'
 	}else if(avg >=50 && avg <60){
 		message = 'Passed, But you can do better!';
+		document.getElementById('imgremark').innerHTML ='<object data="images/cando.gif" height="230px"></object>'
 	}else{
 		message = 'Failed! Try Harder Next Time'
+		document.getElementById('imgremark').innerHTML ='<object data="images/sad.gif" height="230px"></object>'
 	}
 	return message
 }
+
+//'<iframe src="https://giphy.com/embed/3o6Mbnm7WMv7O6yj5K" height="230px" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>'
