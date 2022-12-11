@@ -42,9 +42,19 @@
 		.print, #welcome{
 			color:#3B3F40;
 		}
-		
+		#studName{
+			color:#ba983b;
+			font-size:30px;
+		}
 	</style>
-<body>
+<body onload="
+	var studentName = prompt('Hello There, What is your name?')
+	if(prompt != ''){
+		document.getElementById('studName').innerHTML = studentName;
+	}else{
+		document.getElementById('studName').innerHTML='';
+	}
+">
 	<div class="container-fluid">
 		<div class="row" >
 			<nav class="navbar navbar-expand-lg col-md-12" >
@@ -70,7 +80,7 @@
 			</nav>
 		
 			<div class="col-md-12 mt-3">
-				<h2 id="welcome">Welcome to your Student Portal</h2>
+				<h3 id="welcome">Welcome to your Student Portal, <span id="studName"></span></h3>
 				<h6 class="print">Please follow the instructions below to view your result.</h6>
 					<ol type="i" style="list-style-position:inside" class="print">
 						<li>Have your score ready for the respective subjects.</li>

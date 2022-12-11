@@ -4,6 +4,8 @@ Date: 10th Dec, 2022
 Author: Beatrice Pepple
 */
 
+
+
 function gradeChecker(score){
 	var message = ''; //this is a local variable for this function
 	
@@ -47,7 +49,7 @@ function remarks(){
 	var message = '' //this local variable just for remarks
 	
 	if(avg >=80 && avg <=100){
-		message = 'Excellent!';
+		message = 'Excellent!' ;
 		document.getElementById('imgremark').innerHTML ='<object data="images/amazing.jpg" height="230px"></object>'
 	}else if(avg >=70 && avg <80){
 		message = 'Well done!';
