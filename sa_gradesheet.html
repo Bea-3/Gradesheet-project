@@ -2,16 +2,18 @@
 <html>
 <head>
 	<title>Miniproject - Gradesheet </title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content=" This is a user-friendly Gradesheet for a school where students can obtain their grade, total and average scores.">
+		<meta name="keywords" content="Gradesheet, Result Sheet, ">
+		<meta name="author" content="Beatrice Pepple">
 	<!-- Bootsrtap CSS-->
 	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" >
 </head>
 	<style type="text/css">
 		div{
 			border:0px solid red;
-			min-height:50px;
-		}
-		.bold p{
-			font-size:1.3vw
+			/*min-height:50px;*/
 		}
 		.navbar{
 			background-color:#0a2351
@@ -46,6 +48,7 @@
 			color:#ba983b;
 			font-size:30px;
 		}
+
 	</style>
 <body onload="
 	var studentName = prompt('Hello There, What is your name?')
@@ -57,27 +60,29 @@
 ">
 	<div class="container-fluid">
 		<div class="row" >
-			<nav class="navbar navbar-expand-lg col-md-12" >
-				<div class="container-fluid">
-				<a href="#">
-					<img src="images/salogomini.png" width="20%" alt="logo"> 
-				</a>
-					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navitem"
-					aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon bg-light"></span>
-					</button>
-				<div class="collapse navbar-collapse justify-content-end" id="navitem">
-					<ul class="navbar-nav mb-2 mb-lg-0">
-						<li class="nav-item mx-3">
-						<a class="nav-link active" aria-current="Home" href="#welcome">Home</a>
-						</li>
-						<li class="nav-item">
-						<a class="nav-link" href="#check">Check Grade</a>
-						</li>
-					</ul>
-				</div>
-				</div>
-			</nav>
+				<nav class="navbar navbar-expand-lg col-md-12" >
+					<div class="container-fluid">
+						<a href="#">
+							<img src="images/salogomini.png" width="20%" alt="logo"> 
+						</a>
+							<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+							aria-controls="navbarItems" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon bg-light"></span>
+							</button>
+						<div class="collapse navbar-collapse justify-content-end" id="menu">
+							<ul class="navbar-nav mb-2 mb-lg-0">
+								<li class="nav-item mx-3">
+								<a class="nav-link active" aria-current="page" href="#welcome">Home</a>
+								</li>
+								<li class="nav-item">
+								<a class="nav-link" href="#check">Check Grade</a>
+								</li>
+								<li></li>
+								<li></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
 		
 			<div class="col-md-12 mt-3">
 				<h3 id="welcome">Welcome to your Student Portal, <span id="studName"></span></h3>
@@ -93,7 +98,7 @@
 			</div>
 		</div>
 		
-		<div class="row" >
+		<div class="row">
 			<div class="col-md mt-4" >
 				<h4>Subject</h4>
 				<article class="bold print">
