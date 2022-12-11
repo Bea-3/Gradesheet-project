@@ -20,12 +20,12 @@ function gradeChecker(score){
 	}else if(score >=70 && score <=100){
 		message = 'A'
 	}else{
-		message = 'Input Valid Score '
+		message = 'Input Valid Score'
 	}
 	return message;
 }
 
-	
+
 //onclick function for the button Get result
 function getResult(scoreEng,scoreMath,scoreChem,scoreBio,scoreFre){
 	var _total = Number(scoreEng) + Number(scoreMath) + Number(scoreChem) + Number(scoreBio) + Number(scoreFre)
@@ -59,10 +59,14 @@ function remarks(){
 		message = 'Passed, But you can do better!';
 		document.getElementById('imgremark').innerHTML ='<object data="images/cando.gif" height="230px"></object>'
 	}else if(avg == ''){
-		message = 'You have not input a value'
-	}else{
+		message = 'Invalid! You have not input a value'
+		document.getElementById('imgremark').innerHTML ='<object data="images/invalid.gif" height="230px"></object>'
+	}else if(avg){
 		message = 'Failed! Try Harder Next Time'
 		document.getElementById('imgremark').innerHTML ='<object data="images/sad.gif" height="230px"></object>'
+	}else{
+		message = 'Please check that you have input a valid score'
+		document.getElementById('imgremark').innerHTML ='<object data="images/error.jpg" height="230px"></object>'
 	}
 	return message
 }

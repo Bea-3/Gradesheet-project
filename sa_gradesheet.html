@@ -74,9 +74,10 @@
 				<h6 class="print">Please follow the instructions below to view your result.</h6>
 					<ol type="i" style="list-style-position:inside" class="print">
 						<li>Have your score ready for the respective subjects.</li>
-						<li>Under the score heading, input each score per subject.</li>
-						<li>Please note, you ONLY input the score and the respective grade will display.</li>
+						<li>Input each score per subject.</li>
+						<li>Input ONLY the score and the respective grade will display.</li>
 						<li>Click Get Result.</li>
+						<li>If you see an invalid remark, Don't Worry, just check that you input a number.</li>
 					</ol>
 				<h3 id="check"> Check Grade<h3>
 			</div>
@@ -92,7 +93,7 @@
 					<p>Biology</p>
 					<p>French</p>
 				</article>
-				<button type="button" class="btn btn-outline-warning" onclick="
+				<article style="text-align:right"><button type="button" class="btn btn-outline-warning btn-lg" onclick="
 					var scoreEng = document.getElementById('subEng').value
 					var scoreMath = document.getElementById('subMath').value
 					var scoreChem = document.getElementById('subChem').value
@@ -104,7 +105,7 @@
 					document.getElementById('totalscore').value = getResult(scoreEng,scoreMath,scoreChem,scoreBio,scoreFre)
 					document.getElementById('averageScore').value = average()
 					document.getElementById('remark').value =remarks()
-				">Get Result</button>
+				">Get Result</button></article>
 			</div>
 			
 			<div class="col-md mt-4" >
