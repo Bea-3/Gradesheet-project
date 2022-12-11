@@ -25,6 +25,7 @@ function gradeChecker(score){
 	return message;
 }
 
+	
 //onclick function for the button Get result
 function getResult(scoreEng,scoreMath,scoreChem,scoreBio,scoreFre){
 	var _total = Number(scoreEng) + Number(scoreMath) + Number(scoreChem) + Number(scoreBio) + Number(scoreFre)
@@ -57,6 +58,8 @@ function remarks(){
 	}else if(avg >=50 && avg <60){
 		message = 'Passed, But you can do better!';
 		document.getElementById('imgremark').innerHTML ='<object data="images/cando.gif" height="230px"></object>'
+	}else if(avg == ''){
+		message = 'You have not input a value'
 	}else{
 		message = 'Failed! Try Harder Next Time'
 		document.getElementById('imgremark').innerHTML ='<object data="images/sad.gif" height="230px"></object>'

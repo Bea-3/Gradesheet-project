@@ -42,15 +42,11 @@
 		.print, #welcome{
 			color:#3B3F40;
 		}
-		@media all and (max-width:576px){
-			#row2{
-				
-			}
-		}
+		
 	</style>
 <body>
-	<div class="container">
-		<div class="row" id="row1">
+	<div class="container-fluid">
+		<div class="row" >
 			<nav class="navbar navbar-expand-lg col-md-12" >
 				<div class="container-fluid">
 				<a href="#">
@@ -86,7 +82,7 @@
 			</div>
 		</div>
 		
-		<div class="row" id="row2">
+		<div class="row" >
 			<div class="col-md mt-4" >
 				<h4>Subject</h4>
 				<article class="bold print">
@@ -102,6 +98,8 @@
 					var scoreChem = document.getElementById('subChem').value
 					var scoreBio = document.getElementById('subBio').value
 					var scoreFre = document.getElementById('subFre').value
+					
+					
 					
 					document.getElementById('totalscore').value = getResult(scoreEng,scoreMath,scoreChem,scoreBio,scoreFre)
 					document.getElementById('averageScore').value = average()
